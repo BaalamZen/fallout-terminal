@@ -1,0 +1,17 @@
+Part Name,Manufacturer,Key Specs,Description,Role in Build
+Raspberry Pi 4 Model B (4GB),Raspberry Pi,"1.5GHz Quad-core Cortex-A72, 4GB LPDDR4, Dual micro-HDMI, USB 3.0, Bluetooth 5.0, Gigabit Ethernet, 5V 3A USB-C power",Single-board computer for terminal OS + GPIO/control logic,Primary system computer
+Raspberry Pi 15W USB-C Power Supply (5.1V 3A),Raspberry Pi,"5.1V DC, 3A output, 15.3W max, 1.5m cable, USB-C",Official Raspberry Pi power supply,Dedicated stable 5V rail for Pi
+7-inch Capacitive Touch Screen DIY Kit (EP-0084),Generic (EP-0084 kit),"1024×600, HDMI/VGA/AV视频 inputs, 10-point capacitive touch, rated 6–7W, power: 5V@2A / 9V@1.5A (rec) / 12V@1A",7-inch HDMI monitor + touch panel + driver/CTP board + OSD keypad,Primary display + touch input
+USB 3.0 to 2.5in SATA III Adapter Cable (UASP),Generic / Lcdledus,"USB 3.0 Type-A to SATA 7+15 pin, SATA III (6Gbps), UASP support, 2.5in HDD/SSD only",External adapter cable for 2.5in SATA SSD/HDD connection,External storage access / OS flashing / backups
+2.5in SSD Mounting Brackets (Aluminum),Generic,Aluminum bracket set for 2.5-inch SSD/HDD mounting; multi-hole pattern; uses M3 screws typically,Mechanical mounting brackets to secure 2.5-inch SSD inside the enclosure,SSD retention & vibration-resistant mounting
+Raspberry Pi Heatsink Set (Adhesive),Generic,"Adhesive aluminum heatsinks (CPU + supporting chips), assorted sizes",Passive cooling for Pi chips inside enclosed chassis,Thermal management (passive)
+Noctua 40mm PWM Fan,Noctua,40×40×20mm PWM,Cooling fan for airflow across Pi / power boards,Thermal management (active)
+12V 5A Power Supply,Mean Well / Generic,"12V DC output, 5A regulated",12V rail for LEDs and any 12V accessories,12V power distribution
+10pc 12V 8mm LED Panel Indicator Lights,Unbranded,"12V DC, 8mm, 60LM, 1.8W, IP55",Panel-mount LED indicators,Status & aesthetic indicators
+Red Mushroom Emergency Stop Push Button (22mm),Generic Industrial,"Latching, 1NO+1NC, DPST, 10A, 660V, 22mm mount",Twist-release emergency stop switch,Master kill / dramatic control
+B10K WH148 Linear Potentiometer (3pcs),TWTADE,"10K Ohm, Linear Type B, 6mm shaft",Rotary variable resistor knobs,Analog controls (volume/brightness/other)
+Digital 5V 3W×2 Audio Amplifier Board (PAM8403),Generic,"5V input, Dual 3W output, AUX input, onboard volume control",Stereo Class-D amplifier module,Drives internal speaker(s)
+Mini 8Ω 3W Speaker,Adafruit / Dayton Audio,"8 Ohm, 3 Watt",Internal ambient speaker,Terminal hum / sound output
+Royal Kludge RK61 Mechanical Keyboard,Royal Kludge,"60% layout, Wireless, RGB backlight, Hot swap",Compact mechanical keyboard,Primary input device
+Custom 3D Printed Fallout Terminal Enclosure,Custom,PLA/ABS custom chassis,Fallout-themed housing,Structural & aesthetic enclosure
+"RB-Spa-846 Momentary Button (Panel Mount, Black)",RobotShop,"Momentary push button, panel mount, black; likely SPST-NO; 2 terminals",Panel-mount momentary push button switch (qty 4),GPIO input triggers (Enter/Execute/Service/Function buttons)
