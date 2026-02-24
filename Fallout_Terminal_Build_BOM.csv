@@ -17,3 +17,13 @@ SABRENT USB External Stereo Sound Adapter (AU-MMSA),Sabrent,"USB-A, 3.5mm mic + 
 Royal Kludge RK61 Mechanical Keyboard,Royal Kludge,"60% layout, Wireless, RGB backlight, Hot swap",Compact mechanical keyboard,Primary input device
 Custom 3D Printed Fallout Terminal Enclosure,Custom,PLA/ABS custom chassis,Fallout-themed housing,Structural & aesthetic enclosure
 "RB-Spa-846 Momentary Button (Panel Mount, Black)",RobotShop,"Momentary push button, panel mount, black; likely SPST-NO; 2 terminals",Panel-mount momentary push button switch (qty 4),GPIO input triggers (Enter/Execute/Service/Function buttons)
+M3 x 6mm Socket Cap Head Screws (A2),Accu,"SSCF-M3-6-A2, M3 x 6mm, Full Thread, Stainless Steel A2, Qty: 15, Unit: $0.23",Hex socket cap head screw,General fastening — enclosure panels & brackets
+M3 x 10mm Socket Cap Head Screws (A2),Accu,"SSCF-M3-10-A2, M3 x 10mm, Full Thread, Stainless Steel A2, Qty: 12, Unit: $0.23",Hex socket cap head screw,General fastening — deeper-set panel & component mounting
+M3 x 12mm Socket Cap Head Screws (A2),Accu,"SSCF-M3-12-A2, M3 x 12mm, Full Thread, Stainless Steel A2, Qty: 8, Unit: $0.33",Hex socket cap head screw,General fastening — thicker panel & standoff mounting
+M3 x 8mm Socket Cap Head Screws (12.9),Accu,"SSCF-M3-8-12.9, M3 x 8mm, Full Thread, High Tensile Steel 12.9, Qty: 12, Unit: $0.16",Hex socket cap head screw — high tensile,High-stress fastening — structural joints & load-bearing mounts
+M3 x 7mm Form A Flat Washers (A2),Accu,"HPW-M3-A2, M3 x 7mm OD, Stainless Steel A2, Qty: 32, Unit: $0.16",Form A flat washer,Load distribution under M3 screw/nut heads
+M3 Hexagon Nuts (A2),Accu,"HPN-M3-A2, M3, Stainless Steel A2, Qty: 32, Unit: $0.16",Standard hex nut,Securing M3 bolted joints
+M3 Hexagon Nylon Locking Nuts (A2),Accu,"HNN-M3-A2, M3, Nylon insert, Stainless Steel A2, Qty: 20, Unit: $0.21",Nylon-insert lock nut,Vibration-resistant fastening — fan & moving parts
+M2.5 x 10mm x 5mm Threaded Hexagon Spacers (303),Accu,"HHTPS-M2.5-5-10-SS, M2.5, 10mm length, 5mm hex, Stainless Steel 303, Qty: 4, Unit: $4.12",Female-female threaded hex spacer,PCB standoffs — Pi or driver board mounting
+M2.5 x 6mm Socket Cap Head Screws (A2),Accu,"SSCF-M2.5-6-A2, M2.5 x 6mm, Full Thread, Stainless Steel A2, Qty: 1, Unit: $1.37",Hex socket cap head screw,PCB fastening — secures board to spacer
+M2.5 x 8mm Socket Cap Head Screws (A2),Accu,"SSCF-M2.5-8-A2, M2.5 x 8mm, Full Thread, Stainless Steel A2, Qty: 4, Unit: $0.00",Hex socket cap head screw,PCB fastening — secures board to spacer

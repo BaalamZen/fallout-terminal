@@ -1,5 +1,14 @@
 # Changelog
 
+## 2026-02-24
+
+### Added
+- **Screws/BOM-screws.pdf** — Fastener BOM with images: M3 socket caps (6/8/10/12mm), M2.5 socket caps (6/8mm), M2.5 hex spacers, M3 washers, hex nuts, nylon lock nuts (all Accu)
+- **Lights/Indicator Lights/** — LED rocker switch / illuminated power switch reference page
+
+### Changed
+- **Fallout_Terminal_Build_BOM.csv** — Added 10 fastener line items from screws BOM (M3 & M2.5 screws, washers, nuts, spacers); master BOM now 29 parts
+
 ## 2026-02-23
 
 ### Added
