@@ -1,0 +1,4 @@
+Fallout Desktop Terminal Remix by michaave on Thingiverse: https://www.thingiverse.com/thing:3820304
+
+Summary:
+UPDATE 2020/04/15Now includes a front plate merged into a single piece. In the images, I've printed and installed a vinyl decal on the finished painted surface, with the camera case texture like that seen on the pre-war computers in Fallout 76.UPDATE 2020/01/29Now includes holes in side and back of case for the Raspberry Pi 4B, and a bracket to hold the board down, keeping the ports in place. I had to mirror the rear because of the port configuration of the Pi, but I tried to keep it as unaltered as possible while retaining maximum functionality. This is a remix from PowerUpProps at: https://www.myminifactory.com/object/3d-print-desktop-terminal-replica-fallout-4-74195This is designed to snugly fit the Adafruit 3.5" TFT touchscreen: https://www.adafruit.com/product/2097
