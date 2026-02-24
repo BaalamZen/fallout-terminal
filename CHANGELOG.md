@@ -8,6 +8,7 @@
 
 ### Changed
 - **Fallout_Terminal_Build_BOM.csv** — Added 10 fastener line items from screws BOM (M3 & M2.5 screws, washers, nuts, spacers); master BOM now 29 parts
+- **DIMENSIONS.md** — Added Section 10 (Fasteners) with full ISO/DIN dimensions for all 10 fastener items + hex key reference table; updated parts readiness checklist to 12/19 confirmed
 
 ## 2026-02-23
 

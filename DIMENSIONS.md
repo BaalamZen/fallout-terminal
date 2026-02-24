@@ -27,8 +27,10 @@ All measurements in **mm** unless noted. Tolerances shown where available from d
 | 2.5" SSD | [x] | [ ] |
 | 12V PSU / DC Jack | [ ] | [x] barrel jack size, panel connector |
 | 3D Printed Enclosure | [ ] | [x] internal cavity dims from STL |
+| M3 Fasteners (screws/nuts/washers) | [x] | [ ] |
+| M2.5 Fasteners (screws/spacers) | [x] | [ ] |
 
-**Score:** 10/17 confirmed | 7/17 need measurement
+**Score:** 12/19 confirmed | 7/19 need measurement
 
 ---
 
@@ -377,3 +379,113 @@ Side holes: ~76.60 mm apart along length, 3.0 mm from bottom surface.
 | 4 | 12V PSU | DC barrel jack size, panel-mount connector dims |
 | 5 | Driver board + panel stack | Combined depth when assembled |
 | 6 | STL enclosure files | Import to CAD and measure internal cavity |
+
+---
+
+## 10. Fasteners — Screws, Nuts, Washers & Spacers
+
+All dimensions from ISO/DIN standards. Source PDF: `Screws/BOM-screws.pdf`
+
+### M3 Socket Cap Head Screws (ISO 4762 / DIN 912)
+
+Applies to: SSCF-M3-6-A2, SSCF-M3-10-A2, SSCF-M3-12-A2, SSCF-M3-8-12.9
+
+| Dimension | Value | Status |
+|-----------|-------|--------|
+| Thread diameter (d) | 3.00 | CONFIRMED (ISO 4762) |
+| Thread pitch | 0.50 | CONFIRMED (ISO 4762) |
+| Head diameter (dk) | 5.50 | CONFIRMED (ISO 4762) |
+| Head height (k) | 3.00 | CONFIRMED (ISO 4762) |
+| Socket size (s) — hex key | 2.50 | CONFIRMED (ISO 4762) |
+
+| APC | Length (l) | Material | Qty |
+|-----|-----------|----------|-----|
+| SSCF-M3-6-A2 | 6.00 | Stainless A2 | 15 |
+| SSCF-M3-10-A2 | 10.00 | Stainless A2 | 12 |
+| SSCF-M3-12-A2 | 12.00 | Stainless A2 | 8 |
+| SSCF-M3-8-12.9 | 8.00 | High Tensile 12.9 | 12 |
+
+**Note:** 12.9 grade has identical dimensions to A2 — only material tensile strength differs (~1220 MPa vs ~700 MPa).
+
+### M2.5 Socket Cap Head Screws (ISO 4762 / DIN 912)
+
+Applies to: SSCF-M2.5-6-A2, SSCF-M2.5-8-A2
+
+| Dimension | Value | Status |
+|-----------|-------|--------|
+| Thread diameter (d) | 2.50 | CONFIRMED (ISO 4762) |
+| Thread pitch | 0.45 | CONFIRMED (ISO 4762) |
+| Head diameter (dk) | 4.50 | CONFIRMED (ISO 4762) |
+| Head height (k) | 2.50 | CONFIRMED (ISO 4762) |
+| Socket size (s) — hex key | 2.00 | CONFIRMED (ISO 4762) |
+
+| APC | Length (l) | Qty |
+|-----|-----------|-----|
+| SSCF-M2.5-6-A2 | 6.00 | 1 |
+| SSCF-M2.5-8-A2 | 8.00 | 4 |
+
+**Use:** Pi 4B mounting holes are M2.5. These screws + spacers below secure the Pi to the enclosure.
+
+### M3 Form A Flat Washers (ISO 7089 / DIN 125A)
+
+APC: HPW-M3-A2 | Qty: 32
+
+| Dimension | Value | Status |
+|-----------|-------|--------|
+| Inner diameter (d1) | 3.20 | CONFIRMED (ISO 7089) |
+| Outer diameter (d2) | 7.00 | CONFIRMED (ISO 7089) |
+| Thickness (h) | 0.50 | CONFIRMED (ISO 7089) |
+| Material | Stainless A2 | CONFIRMED |
+
+### M3 Hexagon Nuts (ISO 4032 / DIN 934)
+
+APC: HPN-M3-A2 | Qty: 32
+
+| Dimension | Value | Status |
+|-----------|-------|--------|
+| Thread diameter (d) | 3.00 | CONFIRMED (ISO 4032) |
+| Thread pitch | 0.50 | CONFIRMED (ISO 4032) |
+| Width across flats (s) | 5.50 | CONFIRMED (ISO 4032) |
+| Width across corners (e) | 6.01 | CONFIRMED (ISO 4032) |
+| Height (m) | 2.40 | CONFIRMED (ISO 4032) |
+| Material | Stainless A2 | CONFIRMED |
+
+### M3 Hexagon Nylon Locking Nuts (ISO 7040 / DIN 985)
+
+APC: HNN-M3-A2 | Qty: 20
+
+| Dimension | Value | Status |
+|-----------|-------|--------|
+| Thread diameter (d) | 3.00 | CONFIRMED (ISO 7040) |
+| Thread pitch | 0.50 | CONFIRMED (ISO 7040) |
+| Width across flats (s) | 5.50 | CONFIRMED (ISO 7040) |
+| Width across corners (e) | 6.01 | CONFIRMED (ISO 7040) |
+| Height (m) | 4.00 | CONFIRMED (ISO 7040) |
+| Material | Stainless A2 + nylon insert | CONFIRMED |
+
+**Note:** Lock nuts are 1.6mm taller than standard hex nuts due to the nylon insert. Account for this in joint stack-up calculations.
+
+### M2.5 Threaded Hexagon Spacers (Female-Female)
+
+APC: HHTPS-M2.5-5-10-SS | Qty: 4
+
+| Dimension | Value | Status |
+|-----------|-------|--------|
+| Thread size | M2.5 | CONFIRMED (APC code) |
+| Thread pitch | 0.45 | CONFIRMED (ISO 261) |
+| Hex across flats (AF) | 5.00 | CONFIRMED (APC code) |
+| Body length | 10.00 | CONFIRMED (APC code) |
+| Thread type | Female-female (internal both ends) | CONFIRMED |
+| Material | Stainless Steel 303 | CONFIRMED |
+
+**Use:** PCB standoffs for Raspberry Pi 4B. M2.5 x 8mm screws go through Pi mounting holes into top of spacer; spacer sits on enclosure floor (secured with M2.5 x 6mm screw from below or adhesive).
+
+---
+
+## Hex Key Reference (Tools Needed)
+
+| Fastener | Hex Key Size |
+|----------|-------------|
+| M3 socket caps | 2.5mm |
+| M2.5 socket caps | 2.0mm |
+| M3 hex nuts / lock nuts | 5.5mm spanner or socket |
