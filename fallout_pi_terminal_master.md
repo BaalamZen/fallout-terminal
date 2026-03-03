@@ -166,11 +166,11 @@ The original STL files were designed for a 3.5" Adafruit screen and a decorative
 ║     (EP-0084)         ║  ◎ PAM8403 volume (bottom knob)
 ║                       ║
 ╚═══════════════════════╝
-    ○  ○  ○
-    3x LEDs (horizontal)
+  ●  ●  ●  ●  ●   [PWR]
+  5x LEDs (TBD)    16mm green latching
 
-┌───────────────────────────┐  [BTN1]
-│     RK61 bare PCB         │  [BTN2]
+┌───────────────────────────┐  [BTN1] Soft shutdown
+│     RK61 bare PCB         │  [BTN2] Function (TBD)
 │     (Bluetooth to Pi)     │
 └───────────────────────────┘
 ```
@@ -181,9 +181,13 @@ The original STL files were designed for a 3.5" Adafruit screen and a decorative
 |---|---|---|---|
 | Knob (top-right) | B10K linear potentiometer, 6mm shaft | Panel-mount | Right of screen, top |
 | Knob (bottom-right) | PAM8403 onboard volume | Panel-mount | Right of screen, bottom |
-| LED x3 | 12V 8mm metal indicators | 8mm panel holes | Horizontal, under screen |
+| LED x5 | 12V 8mm metal indicators (green, white, blue, amber, red) | 8mm panel holes | Horizontal, under screen |
+| Power switch | 16mm green LED latching push button | 16mm panel hole | Right of LEDs, under screen |
 | Button x2 | Momentary push button, panel-mount | Panel-mount | Right of keyboard, 3D printed caps |
 | E-stop | Red mushroom 22mm, latching, 1NO+1NC | 22mm panel hole | Left side or top-left rear (TBD) |
+
+### LED Indicators — 5 Colors Available
+Colors in hand: green, white, blue, amber, red. Assignments TBD.
 
 ### Aesthetic Rules
 - Industrial
@@ -202,12 +206,16 @@ The original STL files were designed for a 3.5" Adafruit screen and a decorative
 - **Passive:** Adhesive aluminum heatsink set on Pi chips
 - **Active:** Noctua 40mm PWM fan
 
-### Power Switch
-- **E-stop (mushroom):** Master kill / dramatic control (latching, twist-release)
-- **Soft shutdown:** TBD — momentary switch + GPIO or E-stop wired to relay
-- **Recommended approach:** Soft-shutdown script + momentary switch (prevents SSD corruption from hard power cuts)
+### Power Switch Logic (CONFIRMED)
+- **16mm green latching button:** System armed switch — toggles main power to Pi 5V rail. Green LED ring lights when ON.
+- **Momentary button (BTN1):** Soft shutdown trigger — GPIO script gracefully powers down the Pi before toggling 16mm OFF.
+- **E-stop (mushroom):** Emergency hard kill — cuts both 5V and 12V rails. Panic use only.
 
-**Outstanding:** Finalize soft vs hard cut implementation.
+### Power-On/Off Workflow
+1. Toggle 16mm green button ON → Pi boots, green LED ring + green indicator lit
+2. Press BTN1 (momentary) → GPIO triggers clean shutdown script
+3. Wait for Pi to finish shutting down → toggle 16mm OFF
+4. E-stop = emergency only (risk of SSD corruption on hard cut)
 
 ---
 
@@ -228,11 +236,11 @@ The original STL files were designed for a 3.5" Adafruit screen and a decorative
 
 1. Keyboard switch model (MX, exact SKU)
 2. Fan control method (PWM GPIO vs inline voltage)
-3. Power switch logic (soft shutdown via GPIO vs hard cut)
-4. Speaker selection (size, impedance, mounting)
-5. USB audio DAC model selection (required, not optional)
-6. LED indicator assignments (which 3 colors, what they signal)
-7. Momentary button functions (Enter/Execute? Power/Mode?)
+3. ~~Power switch logic~~ — RESOLVED: 16mm latching = system armed, BTN1 momentary = soft shutdown, E-stop = emergency kill
+4. ~~Speaker selection~~ — RESOLVED: Dayton Audio DS90-8 (in hand)
+5. ~~USB audio DAC~~ — RESOLVED: SABRENT AU-MMSA (in hand)
+6. LED indicator assignments (5 colors available: green, white, blue, amber, red — assignments TBD)
+7. Momentary button functions (BTN1 = soft shutdown confirmed, BTN2 TBD)
 8. E-stop exact position (left side vs top-left rear)
 9. Enclosure redesign (CAD tool, who models it)
 10. Bare RK61 PCB measurements (after disassembly)
@@ -294,25 +302,25 @@ The original STL files were designed for a 3.5" Adafruit screen and a decorative
 - 12V 8mm LED indicators (10-pack)
 - Red mushroom E-stop (22mm)
 - Momentary push buttons (4-pack)
-- 12V 5A PSU
 - Noctua 40mm fan
 - Pi heatsink set
+- M3 screws (6/8/10/12mm), washers, hex nuts, nylon lock nuts (Accu)
+- M2.5 screws (6/8mm), hex spacers (Accu)
+- Short USB-C to USB-C cable (internal RK61 power)
+- 20cm F-M Dupont jumper wires, 40-pack (California JOS)
 
 **To Buy (High Priority)**
-- Speaker (mini, 8ohm 3W or similar - spec TBD)
-- Short USB-C cable (internal, for RK61 power)
+- ~~12V 5A power supply~~ — ORDERED (ALITOVE, 5.5x2.5mm barrel jack)
 - MX switch set (if replacing stock RK61 switches)
 
 **To Buy (Build Phase)**
-- Assorted M3 screws + standoffs
-- Wiring (Dupont, JST connectors)
+- JST connectors (if needed for permanent wiring)
 - Heat shrink / wire management
 
 **Optional / Finish**
 - Label plates
 - Faux wear / weathering materials
 - Sleeved internal wiring
-- USB audio DAC (required — Pi analog is too noisy)
 
 ---
 
@@ -340,15 +348,17 @@ The original STL files were designed for a 3.5" Adafruit screen and a decorative
 | SSD + Mount | Purchased |
 | Keyboard (RK61) | Purchased |
 | Switches | Open — finalize SKU |
-| Audio amp (PAM8403) | Purchased |
-| Speaker | NOT YET PURCHASED |
-| USB Audio DAC | NOT YET PURCHASED |
+| Audio amp (PAM8403) | Received |
+| Speaker (Dayton DS90-8) | Received |
+| USB Audio DAC (Sabrent AU-MMSA) | Received |
 | Cooling (Noctua fan) | Owned |
-| Power (12V + 5V PSUs) | Purchased |
+| Power (5V Pi PSU) | Owned |
+| Power (12V 5A PSU — ALITOVE) | Ordered |
 | Controls (LEDs, buttons, pots, E-stop) | Purchased |
-| Wiring / connectors | Not yet purchased |
+| Fasteners (M3/M2.5 screws, nuts, washers, spacers) | Received |
+| Wiring (Dupont F-M 40-pack) | Received |
 | Software | Not started |
 
 ---
 
-**Project Status:** BOM largely purchased. Outstanding work: speaker selection, USB DAC purchase, switch selection, enclosure redesign (major), wiring design, and software.
+**Project Status:** BOM nearly complete. Outstanding work: switch selection, enclosure redesign (major), and software.

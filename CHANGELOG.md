@@ -1,5 +1,13 @@
 # Changelog
 
+## 2026-03-03
+
+### Changed
+- **Fallout_Terminal_Build_BOM.csv** — Marked all 10 Accu fastener items as received (In Hand: Yes): M3 screws (6/8/10/12mm), M3 washers, M3 hex nuts, M3 nylon lock nuts, M2.5 screws (6/8mm), M2.5 hex spacers
+- **fallout_pi_terminal_master.md** — Moved fasteners from "To Buy" to "Already Purchased"; added fasteners row to status table; marked PAM8403 amp as received; moved USB-C cable from "To Buy" to "Already Purchased"
+- **Fallout_Terminal_Build_BOM.csv** — Added short USB-C to USB-C cable as new BOM line (In Hand: Yes); marked PAM8403 XF0172 as received with updated specs; updated 16mm power button (Adafruit green latching, in hand, role: system armed switch); updated LED indicators (5 colors: green/white/blue/amber/red, assignments TBD); BOM now 30 parts
+- **fallout_pi_terminal_master.md** — Confirmed power switch logic (16mm latching = armed, BTN1 = soft shutdown, E-stop = emergency); updated front panel to 5 LEDs + power button; resolved outstanding decisions #3/#4/#5; LED color assignments left open
+
 ## 2026-02-24
 
 ### Added
